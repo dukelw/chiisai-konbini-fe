@@ -1,0 +1,104 @@
+.navigation_list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.navigation_list-item {
+  padding: 16px 12px;
+}
+
+.navigation_list-item-link {
+  position: relative;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.navigation_list-item-link > span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation_list-item-link > span > i {
+  margin-right: 4px;
+}
+
+.navigation_list-item-link::before {
+  z-index: 100;
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-white-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navigation_list-item-link:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.primary-icon:hover,
+.navigation_list-item-link:hover > span,
+.navigation_side-content-item:hover a,
+.navigation_list-item-link:hover i,
+.navigation_list-item-link:hover {
+  color: var(--primary-white-color);
+  cursor: pointer;
+}
+
+.navigation_side-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation_side-content-right-list,
+.navigation_side-content-left-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0px;
+}
+
+.navigation_side-content-item {
+  padding: 0 6px;
+  text-decoration: none;
+  border-left: 1px solid var(--primary-black-color);
+}
+
+.navigation_side-content-item a {
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+.navigation_search-field {
+  position: relative;
+  text-align: center;
+}
+
+.navigation_search-input {
+  border: 0;
+  background-color: #e8e8e8;
+  box-shadow: none;
+  height: 50px;
+  padding: 0 380px 0 40px;
+  border-radius: 33px;
+  outline: none;
+  font-size: 1.4rem;
+}
+
+.navigation_search-icon {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  transform: translateY(-50%);
+}
