@@ -46,7 +46,7 @@ function Search() {
   return (
     <div>
       <HeadlessTippy
-        visible
+        // visible
         interactive
         placement="bottom-end"
         render={(attrs) => {
