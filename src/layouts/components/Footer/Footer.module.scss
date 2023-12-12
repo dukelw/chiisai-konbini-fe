@@ -1,0 +1,35 @@
+.grid {
+  &.footer {
+    background-color: var(--primary-item-color);
+    padding: 40px 60px 80px 60px;
+  }
+}
+
+.footer_list {
+  list-style: none;
+}
+
+.footer_list-item {
+  margin-top: 16px;
+}
+
+.footer_list-item-header {
+  text-transform: uppercase;
+  color: var(--primary-black-color);
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.footer_list-item-link {
+  color: var(--primary-black-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.footer_list-item-link:hover {
+  color: var(--primary-white-color);
+}
+
+.footer_list-item-office {
+  text-decoration: underline;
+}

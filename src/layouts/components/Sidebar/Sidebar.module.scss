@@ -1,0 +1,148 @@
+// Product
+.product-container {
+  margin: 40px auto !important;
+}
+
+.product-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: var(--primary-item-color);
+  width: 140px;
+}
+
+.product-img {
+  width: 140px;
+  height: 140px;
+}
+
+.product-infor {
+  width: 140px;
+  padding: 8px;
+}
+
+.product-name {
+  font-size: 1.2rem;
+}
+
+.product-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-old-price {
+  font-size: 1.2rem;
+}
+
+.product-new-price {
+  font-size: 1.4rem;
+}
+
+.product-sell-status {
+  font-size: 1rem;
+}
+
+// Sort
+.product-sort {
+  padding: 12px;
+  background-color: var(--primary-item-color);
+}
+
+.product-sort-header {
+  font-size: 1.8rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.product-sort-type {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #97a3b2;
+}
+
+.product-sort-type-title {
+  padding: 0;
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.product-sort-type-title > p {
+  margin-bottom: 10px;
+}
+
+.product-sort-type-name {
+  font-size: 1.4rem;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.product-col {
+  margin-top: 20px;
+}
+
+// Sort
+.sort-row {
+  overflow: visible !important;
+}
+
+.sort-zone {
+  margin: auto 0 auto 16px;
+  padding: 16px 0;
+  min-width: 120px;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+#sort-type-select {
+  position: relative;
+  overflow: visible;
+  font-size: 1.4rem;
+  min-width: 120px;
+  padding: 0 16px;
+  background-color: var(--primary-item-color);
+  text-align: center;
+}
+
+#selected-sort-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.sort-option-list {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sort-option {
+  position: relative;
+  z-index: 10;
+  font-size: 1.4rem;
+  min-width: 120px;
+  padding: 16px;
+  background-color: var(--primary-item-color);
+  text-align: center;
+}
+
+#sort-type-select:hover,
+.sort-option:hover {
+  cursor: pointer;
+  background-color: #e8e8e8;
+}
+
+.checkbox {
+  margin-right: 4px;
+}

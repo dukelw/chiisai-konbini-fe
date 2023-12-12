@@ -102,3 +102,23 @@
   left: 2%;
   transform: translateY(-50%);
 }
+
+.search-result,
+.navigation_search {
+  width: 600px;
+}
+
+.heading {
+  font-size: 1.6rem;
+}
+
+.more {
+  font-size: 1.2rem;
+  margin-top: 8px;
+
+  &:hover {
+    font-weight: 600;
+    color: var(--primary-white-color);
+    cursor: pointer;
+  }
+}
