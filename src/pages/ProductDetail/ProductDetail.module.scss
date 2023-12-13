@@ -1,0 +1,140 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px;
+  overflow: hidden;
+}
+
+.product {
+  display: flex;
+  align-items: flex-start;
+  padding: 40px 80px;
+  background-color: var(--primary-item-color);
+}
+
+.product-img {
+  overflow: hidden;
+  flex-shrink: 0;
+  width: 50%;
+  border-radius: 5px;
+
+  img {
+    cursor: pointer;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+
+    &:hover {
+      transform: scale(1.01);
+    }
+  }
+}
+
+.product-actions {
+  margin-left: 60px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+
+  .product-name {
+    font-size: 3rem;
+    padding: 8px 0;
+    font-weight: 600;
+  }
+
+  .product-price {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+}
+
+.product-option {
+  display: flex;
+  flex-direction: column;
+
+  .product-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+}
+
+.label {
+  color: var(--primary-text-color);
+  margin-bottom: 4px;
+}
+
+.product-quantity {
+  margin-bottom: 16px;
+
+  .quantity {
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin-left: 16px;
+  }
+}
+
+.feature-list {
+  list-style-type: none;
+  margin-left: 16px;
+
+  .feature-item {
+    font-size: 1.4rem;
+    text-decoration: none;
+  }
+}
+
+// Shop
+.shop {
+  width: 100%;
+  margin: 16px 0;
+  padding: 16px;
+  background-color: var(--primary-item-color);
+
+  .shop-img {
+    width: 80px;
+    object-fit: cover;
+  }
+
+  .first-col {
+    display: flex;
+
+    .shop-about {
+      margin-left: 8px;
+    }
+
+    .shop-info {
+      font-size: 1.4rem;
+
+      .lastest-online {
+        color: #333;
+      }
+    }
+
+    .shop-nav {
+      display: flex;
+    }
+  }
+
+  .other-col {
+    display: flex;
+    flex-direction: column;
+
+    .criteria {
+      font-size: 1.4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 40px;
+      flex: 1;
+
+      span {
+        color: var(--primary-white-color);
+      }
+    }
+  }
+}

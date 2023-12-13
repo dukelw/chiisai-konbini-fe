@@ -1,6 +1,7 @@
 import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
 import { Link } from 'react-router-dom';
+import Button from '~/components/Button';
 import Search from '../Search';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faLanguage, faUserCircle } from '@fortawesome/free-solid-svg-icons';
@@ -42,10 +43,7 @@ function MainNav() {
           return (
             <li key={index} className={cx('navigation_list-item')}>
               <Link to={content.path} className={cx('navigation_list-item-link')}>
-                <span>
-                  <i className="fa-solid fa-list"></i>
-                  {content.title}
-                </span>
+                <span>{content.title}</span>
               </Link>
             </li>
           );
@@ -54,24 +52,17 @@ function MainNav() {
 
       <Search />
 
-      {/* Actions */}
-      <ul className={cx('navigation_list')}>
-        <li className={cx('navigation_list-item')}>
-          <Link className={cx('navigation_list-item-link')}>
-            <FontAwesomeIcon className={cx('primary-icon')} icon={faLanguage}></FontAwesomeIcon>
-          </Link>
-        </li>
-        <li className={cx('navigation_list-item')}>
-          <Link className={cx('navigation_list-item-link')} to="/signin">
-            <FontAwesomeIcon className={cx('primary-icon')} icon={faUserCircle}></FontAwesomeIcon>
-          </Link>
-        </li>
-        <li className={cx('navigation_list-item')}>
-          <Link className={cx('navigation_list-item-link')} to="/cart">
-            <FontAwesomeIcon className={cx('primary-icon')} icon={faCartShopping}></FontAwesomeIcon>
-          </Link>
-        </li>
-      </ul>
+      <div className={cx('actions')}>
+        <Button primary>
+          <FontAwesomeIcon icon={faLanguage}></FontAwesomeIcon>
+        </Button>
+        <Button primary to={'/signin'}>
+          <FontAwesomeIcon icon={faUserCircle}></FontAwesomeIcon>
+        </Button>
+        <Button primary to={'/cart'}>
+          <FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon>
+        </Button>
+      </div>
     </div>
   );
 }
