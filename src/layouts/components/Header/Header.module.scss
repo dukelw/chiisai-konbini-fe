@@ -153,3 +153,36 @@
   left: 2%;
   transform: translateY(-50%);
 }
+
+.actions {
+  display: flex;
+
+  .action + .action {
+    margin-left: 8px;
+  }
+}
+
+.language {
+  display: flex;
+  flex-direction: column;
+
+  .language-title {
+    font-size: 1.4rem;
+    text-decoration: none;
+    padding: 8px;
+    color: var(--primary-white-color);
+  }
+
+  .language-item {
+    font-size: 1.4rem;
+    text-decoration: none;
+    padding: 8px;
+    color: var(--primary-white-color);
+
+    &:hover {
+      color: var(--primary-item-color);
+      background-color: var(--primary-white-color);
+      cursor: pointer;
+    }
+  }
+}

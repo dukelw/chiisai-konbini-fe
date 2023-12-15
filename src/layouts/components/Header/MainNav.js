@@ -1,10 +1,12 @@
 import classNames from 'classnames/bind';
-import styles from './Header.module.scss';
 import { Link } from 'react-router-dom';
-import Button from '~/components/Button';
-import Search from '../Search';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faLanguage, faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import HeadlessTippy from '@tippyjs/react/headless';
+import PopperWrapper from '~/components/Popper/Wrapper';
+import styles from './Header.module.scss';
+import Button from '~/components/Button';
+import Search from '../Search';
 
 const cx = classNames.bind(styles);
 
@@ -24,6 +26,17 @@ const NAVIGATION_MAIN_CONTENT = [
   {
     title: 'Quà tặng',
     path: '/gift',
+  },
+];
+
+const LANGUAGE = [
+  {
+    title: 'Tiếng Việt',
+    code: 'vi',
+  },
+  {
+    title: 'English',
+    code: 'en',
   },
 ];
 
@@ -53,15 +66,38 @@ function MainNav() {
       <Search />
 
       <div className={cx('actions')}>
-        <Button primary>
-          <FontAwesomeIcon icon={faLanguage}></FontAwesomeIcon>
-        </Button>
-        <Button primary to={'/signin'}>
-          <FontAwesomeIcon icon={faUserCircle}></FontAwesomeIcon>
-        </Button>
-        <Button primary to={'/cart'}>
-          <FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon>
-        </Button>
+        <HeadlessTippy interactive render={attrs => {
+          return (
+            <PopperWrapper {...attrs}>
+              <div className={cx('language')}>
+                <h3 className={cx('language-title')}>Ngôn ngữ</h3>
+                {LANGUAGE.map((language, index) => {
+                  return (
+                    <Link key={index} to={language.path} className={cx('language-item')}>
+                      {language.title}
+                    </Link>
+                  )
+                })}
+              </div>
+            </PopperWrapper>
+          )
+        }}>
+          <div className={cx('action')}>
+            <Button primary>
+              <FontAwesomeIcon icon={faLanguage}></FontAwesomeIcon>
+            </Button>
+          </div>
+        </HeadlessTippy>
+        <div className={cx('action')}>
+          <Button primary to={'/signin'}>
+            <FontAwesomeIcon icon={faUserCircle}></FontAwesomeIcon>
+          </Button>
+        </div>
+        <div className={cx('action')}>
+          <Button primary to={'/cart'}>
+            <FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon>
+          </Button>
+        </div>
       </div>
     </div>
   );

@@ -2,9 +2,37 @@ import classNames from 'classnames/bind';
 import Button from '~/components/Button';
 import styles from './ProductDetail.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMessage, faStore } from '@fortawesome/free-solid-svg-icons';
+import { faBox, faMessage, faStore } from '@fortawesome/free-solid-svg-icons';
+import FeatureCard from '~/components/FeatureCard';
 
 const cx = classNames.bind(styles);
+
+const PRODUCT_POLICY = [
+  {
+    header: <FontAwesomeIcon icon={faBox}></FontAwesomeIcon>,
+    message: 'Đổi trả cực dễ chỉ cần số điện thoại',
+  },
+  {
+    header: <FontAwesomeIcon icon={faBox}></FontAwesomeIcon>,
+    message: 'Đổi trả cực dễ chỉ cần số điện thoại',
+  },
+  {
+    header: <FontAwesomeIcon icon={faBox}></FontAwesomeIcon>,
+    message: 'Đổi trả cực dễ chỉ cần số điện thoại',
+  },
+  {
+    header: <FontAwesomeIcon icon={faBox}></FontAwesomeIcon>,
+    message: 'Đổi trả cực dễ chỉ cần số điện thoại',
+  },
+  {
+    header: <FontAwesomeIcon icon={faBox}></FontAwesomeIcon>,
+    message: 'Đổi trả cực dễ chỉ cần số điện thoại',
+  },
+  {
+    header: <FontAwesomeIcon icon={faBox}></FontAwesomeIcon>,
+    message: 'Đổi trả cực dễ chỉ cần số điện thoại',
+  },
+];
 
 function ProductDetail({ data }) {
   return (
@@ -61,6 +89,17 @@ function ProductDetail({ data }) {
                 <Button primary>Đặt ngay</Button>
               </div>
             </div>
+            <div className={cx('product-section', 'grid')}>
+              <div className={cx('row')}>
+                {PRODUCT_POLICY.map((policy, index) => {
+                  return (
+                    <div key={index} className={cx('col', 'l-4', 'feature-col')}>
+                      <FeatureCard white small data={policy}></FeatureCard>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
             <div className={cx('product-section')}>
               <p className={cx('label')}>Đặc điểm nổi bật</p>
               <ul className={cx('feature-list')}>
@@ -91,7 +130,8 @@ function ProductDetail({ data }) {
         <div className={cx('grid')}>
           <div className={cx('row')}>
             <div className={cx('col', 'l-3', 'first-col')}>
-              <img className={cx('shop-img')}
+              <img
+                className={cx('shop-img')}
                 src="https://i.ex-cdn.com/mgn.vn/files/content/2022/08/09/komi-cant-communicate-2-1555.jpg"
                 alt="Shop"
               />

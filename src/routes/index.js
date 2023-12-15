@@ -6,6 +6,7 @@ import config from '~/config';
 import { HeaderAndSidebar } from '~/layouts';
 import ProductDetail from '~/pages/ProductDetail';
 import Cart from '~/pages/Cart';
+import About from '~/pages/About';
 
 // Public routes
 const publicRoutes = [
@@ -15,6 +16,7 @@ const publicRoutes = [
   { path: config.routes.product, component: Product, layout: HeaderAndSidebar },
   { path: config.routes.detail, component: ProductDetail },
   { path: config.routes.cart, component: Cart },
+  { path: config.routes.about, component: About, layout: null },
 ];
 
 // Private routes

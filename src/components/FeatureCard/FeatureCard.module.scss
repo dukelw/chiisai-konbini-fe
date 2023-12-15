@@ -1,0 +1,41 @@
+.wrapper {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  background-color: var(--primary-item-color);
+  border-radius: 20px;
+
+  .right {
+    color: var(--primary-white-color);
+  }
+
+  &.white {
+    background-color: var(--primary-white-color);
+    color: var(--primary-item-color);
+
+    .right {
+      color: var(--primary-item-color);
+    }
+  }
+
+  &.small {
+    .left {
+      font-size: 2.4rem;
+    }
+
+    .right {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.left {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-right: 12px;
+}
+
+.right {
+  font-size: 2rem;
+}

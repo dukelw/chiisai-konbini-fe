@@ -211,12 +211,20 @@ function Cart() {
         </div>
 
         <div className={cx('row', 'cart-row', 'buy')}>
-          <div className={cx('col', 'card-col')}>
-            <input type="checkbox" className={cx('checkbox')} />
-            Chọn tất cả
+          <div className={cx('discharge')}>
+            <div>
+              <input type="checkbox" className={cx('checkbox')} />
+              <span>Chọn tất cả</span>
+            </div>
+            <Button primary className={cx('discharge-button')}>
+              Voucher
+            </Button>
           </div>
-          <div className={cx('col', 'card-col')}>
-            <Button primary>Thanh toán</Button>
+          <div className={cx('discharge')}>
+            <p>
+              Tổng tiền: <span>6300000</span>
+            </p>
+            <Button primary className={cx('discharge-button')}>Thanh toán</Button>
           </div>
         </div>
       </div>

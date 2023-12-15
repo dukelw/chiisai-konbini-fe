@@ -72,3 +72,12 @@
     margin-bottom: 12px;
   }
 }
+
+.discharge {
+  display: flex;
+  flex-direction: column;
+
+  .discharge-button {
+    margin-top: 12px;
+  }
+}
