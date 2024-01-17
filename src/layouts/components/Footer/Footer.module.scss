@@ -13,21 +13,22 @@
   margin-top: 16px;
 }
 
+.footer_list-item:hover .footer_list-item-link {
+  display: block;
+  transition: transform 0.3 ease-in-out;
+  transform: scale(1.1);
+}
+
 .footer_list-item-header {
+  color: var(--primary-white-color);
   text-transform: uppercase;
-  color: var(--primary-black-color);
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
 }
 
 .footer_list-item-link {
-  color: var(--primary-black-color);
   text-decoration: none;
-  font-size: 1.2rem;
-}
-
-.footer_list-item-link:hover {
-  color: var(--primary-white-color);
+  font-size: 1.4rem;
 }
 
 .footer_list-item-office {

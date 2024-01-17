@@ -89,7 +89,7 @@ function MainNav() {
           </div>
         </HeadlessTippy>
         <div className={cx('action')}>
-          <Button primary to={'/signin'}>
+          <Button primary to={'/buyer/signin'}>
             <FontAwesomeIcon icon={faUserCircle}></FontAwesomeIcon>
           </Button>
         </div>

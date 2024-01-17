@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 const NAVIGATION_SITE_CONTENT_LEFT = [
   {
     title: 'Bán hàng cùng chúng tôi',
-    path: '/seller-signup',
+    path: '/seller/signin',
   },
   {
     title: 'Chăm sóc khách hàng',

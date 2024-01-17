@@ -6,6 +6,7 @@
   flex-direction: column;
   padding: 0 80px;
   background-color: var(--primary-item-color);
+  height: fit-content;
 }
 
 .navigation_main-content {
@@ -13,6 +14,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 4px 0;
 }
 
 .navigation_logo {
@@ -31,7 +33,7 @@
   position: relative;
   width: 100%;
   height: 100%;
-  background-image: url('https://i.pinimg.com/originals/ac/0b/3b/ac0b3b4f2f7c1a89e045b2f186d6f7e1.jpg');
+  background-image: url('../../../assets/images/logo.svg');
   background-size: cover;
   transition: transform 0.3s;
   transform-origin: center center;
@@ -116,14 +118,15 @@
   text-decoration: none;
 
   :hover {
-    color: var(--primary-white-color);
+    text-shadow: 1px 1px var(--primary-white-color);
+    color: var(--primary-item-color);
     cursor: pointer;
   }
 }
 
 .navigation_side-content-item-link {
   padding: 0 6px;
-  border-left: 1px solid var(--primary-black-color);
+  border-left: 1px solid var(--primary-white-color);
 }
 
 .navigation_side-content-item a {

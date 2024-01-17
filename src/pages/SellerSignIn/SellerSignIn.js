@@ -1,13 +1,15 @@
 import classNames from 'classnames/bind';
-import styles from './SignIn.module.scss';
+import styles from './SellerSignIn.module.scss';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { REACT_APP_API_KEY, REACT_APP_API_URL } from '~/private/constant';
 const cx = classNames.bind(styles);
 
-function SignIn() {
+function SellerSignIn() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+
   function handleSubmit(e) {
     e.preventDefault();
     const apiUrl = REACT_APP_API_URL + 'shop/signin';
@@ -28,6 +30,9 @@ function SignIn() {
     fetch(apiUrl, requestData)
       .then((response) => response.json())
       .then((data) => {
+        if (data.status !== 'error') {
+          navigate('/');
+        }
         console.log('Response:', data);
       })
       .catch((error) => console.error(error));
@@ -45,13 +50,13 @@ function SignIn() {
     <div className={cx('login_container')}>
       <div className={cx('login_left')}></div>
       <div className={cx('login_right')}>
-        <form action="/signin" method="POST" className={cx('form')} id="form-login">
+        <form action="/" method="POST" className={cx('form')} id="form-login">
           <h3 className={cx('heading')}>
             <Link className={cx('heading_link', 'current')} to="/">
               Đăng nhập
             </Link>
             <p className={cx('heading_space')}>hoặc</p>
-            <Link className={cx('heading_link')} to="/signup">
+            <Link className={cx('heading_link')} to="/seller/signup">
               Đăng ký
             </Link>
           </h3>
@@ -136,4 +141,4 @@ function SignIn() {
     </div>
   );
 }
-export default SignIn;
+export default SellerSignIn;

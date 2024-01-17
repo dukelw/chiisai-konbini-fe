@@ -210,7 +210,7 @@ function Cart() {
           </div>
         </div>
 
-        <div className={cx('row', 'cart-row', 'buy')}>
+        <div className={cx('row', 'cart-row', 'cart-pay', 'buy')}>
           <div className={cx('discharge')}>
             <div>
               <input type="checkbox" className={cx('checkbox')} />

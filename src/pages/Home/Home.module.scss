@@ -4,8 +4,12 @@
 
 .section {
   padding: 40px;
-  background-color: var(--primary-color);
+  background-image: linear-gradient(to bottom right, var(--primary-item-color), var(--primary-color));
   margin-bottom: 12px;
+
+  .section-row.sm-gutter {
+    min-height: 500px;
+  }
 }
 
 .suggestion {
@@ -27,6 +31,6 @@
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: 600;
-  color: var(--primary-white-color);
+  color: var(--primary-item-color);
   margin-bottom: 8px;
 }

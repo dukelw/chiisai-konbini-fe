@@ -8,8 +8,15 @@
     padding-bottom: 16px;
   }
 
-  .cart-row {
+  .cart-row.cart-pay {
+    background-image: none;
     background-color: var(--primary-item-color);
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  .cart-row {
+    background-image: linear-gradient(to bottom right, var(--primary-item-color), var(--primary-color));
     margin-top: 16px;
     margin-bottom: 16px;
 

@@ -1,22 +1,22 @@
 import classNames from 'classnames/bind';
-import styles from './SignUp.module.scss';
+import styles from './SellerSignUp.module.scss';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { REACT_APP_API_KEY, REACT_APP_API_URL } from '~/private/constant';
 
 const cx = classNames.bind(styles);
 
-function SignUp() {
+function SellerSignUp() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmedPassword, setConfirmedPassword] = useState('');
+  const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
     const apiUrl = REACT_APP_API_URL + 'shop/signup';
     const apiKey = REACT_APP_API_KEY;
-    console.log(apiKey);
 
     const requestData = {
       method: 'POST',
@@ -33,6 +33,9 @@ function SignUp() {
     fetch(apiUrl, requestData)
       .then((response) => response.json())
       .then((data) => {
+        if (data.status !== 'error') {
+          navigate('/');
+        }
         console.log('Response:', data);
       })
       .catch((error) => console.error(error));
@@ -58,9 +61,9 @@ function SignUp() {
     <div className={cx('login_container')}>
       <div className={cx('login_left')}></div>
       <div className={cx('login_right')}>
-        <form action="/user/register" method="POST" className={cx('form')} id="form-regist">
+        <form action="/" method="POST" className={cx('form')} id="form-regist">
           <h3 className={cx('heading')}>
-            <Link className={cx('heading_link')} to="/signin">
+            <Link className={cx('heading_link')} to="/seller/signin">
               Đăng nhập
             </Link>
             <p className={cx('heading_space')}>hoặc</p>
@@ -173,4 +176,4 @@ function SignUp() {
   );
 }
 
-export default SignUp;
+export default SellerSignUp;

@@ -6,9 +6,9 @@
   --primary-white-color: #ffffff;
   --primary-background-color: #1f2833;
   --primary-black-color: #0b0c10;
-  --primary-color: #1bc1c1;
-  --primary-item-color: rgb(52, 213, 209);
-  --login-text-color: #c9d3de;
+  --primary-color: #87cefa;
+  --primary-item-color: #1e90ff;
+  --login-text-color: #c9d8de;
 
   --navigation-height: 92px;
 }
@@ -28,6 +28,7 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
+  background-color: var(--primary-color);
 }
 
 button,
@@ -39,7 +40,7 @@ input,
 }
 
 a {
-  color: var(--primary-text-color);
+  color: var(--primary-white-color);
 }
 
 .no-border-left {

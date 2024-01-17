@@ -1,11 +1,11 @@
-import classNames from "classnames/bind";
-import { Link } from "react-router-dom";
-import styles from './Home.module.scss'
-import ProductCard from "~/components/ProductCard";
-import Button from "~/components/Button";
-import CategoryCard from "~/components/CategoryCard";
+import classNames from 'classnames/bind';
+import { Link } from 'react-router-dom';
+import styles from './Home.module.scss';
+import ProductCard from '~/components/ProductCard';
+import Button from '~/components/Button';
+import CategoryCard from '~/components/CategoryCard';
 
-const cx = classNames.bind(styles)
+const cx = classNames.bind(styles);
 
 const PRODUCT = [
   {
@@ -85,99 +85,99 @@ const PRODUCT = [
 const CATEGORY = [
   {
     name: 'Thời trang nam',
-    image: 'https://lzd-img-global.slatic.net/g/p/80d757f1dbb812674afddaef89ec9220.jpg_webp_960x960q80.jpg_.webp',
+    image: 'https://eurocook.com.vn/Data/upload/images/tu%CC%89%20la%CC%A3nh/tu-lanh-aqua.jpg',
   },
   {
     name: 'Thời trang nam',
-    image: 'https://lzd-img-global.slatic.net/g/p/80d757f1dbb812674afddaef89ec9220.jpg_webp_960x960q80.jpg_.webp',
+    image: 'https://eurocook.com.vn/Data/upload/images/tu%CC%89%20la%CC%A3nh/tu-lanh-aqua.jpg',
   },
   {
     name: 'Thời trang nam',
-    image: 'https://lzd-img-global.slatic.net/g/p/80d757f1dbb812674afddaef89ec9220.jpg_webp_960x960q80.jpg_.webp',
+    image: 'https://eurocook.com.vn/Data/upload/images/tu%CC%89%20la%CC%A3nh/tu-lanh-aqua.jpg',
   },
   {
     name: 'Thời trang nam',
-    image: 'https://lzd-img-global.slatic.net/g/p/80d757f1dbb812674afddaef89ec9220.jpg_webp_960x960q80.jpg_.webp',
+    image: 'https://eurocook.com.vn/Data/upload/images/tu%CC%89%20la%CC%A3nh/tu-lanh-aqua.jpg',
   },
   {
     name: 'Thời trang nam',
-    image: 'https://lzd-img-global.slatic.net/g/p/80d757f1dbb812674afddaef89ec9220.jpg_webp_960x960q80.jpg_.webp',
+    image: 'https://eurocook.com.vn/Data/upload/images/tu%CC%89%20la%CC%A3nh/tu-lanh-aqua.jpg',
   },
   {
     name: 'Thời trang nam',
-    image: 'https://lzd-img-global.slatic.net/g/p/80d757f1dbb812674afddaef89ec9220.jpg_webp_960x960q80.jpg_.webp',
+    image: 'https://eurocook.com.vn/Data/upload/images/tu%CC%89%20la%CC%A3nh/tu-lanh-aqua.jpg',
   },
   {
     name: 'Thời trang nam',
-    image: 'https://lzd-img-global.slatic.net/g/p/80d757f1dbb812674afddaef89ec9220.jpg_webp_960x960q80.jpg_.webp',
+    image: 'https://eurocook.com.vn/Data/upload/images/tu%CC%89%20la%CC%A3nh/tu-lanh-aqua.jpg',
   },
   {
     name: 'Thời trang nam',
-    image: 'https://lzd-img-global.slatic.net/g/p/80d757f1dbb812674afddaef89ec9220.jpg_webp_960x960q80.jpg_.webp',
+    image: 'https://eurocook.com.vn/Data/upload/images/tu%CC%89%20la%CC%A3nh/tu-lanh-aqua.jpg',
   },
   {
     name: 'Thời trang nam',
-    image: 'https://lzd-img-global.slatic.net/g/p/80d757f1dbb812674afddaef89ec9220.jpg_webp_960x960q80.jpg_.webp',
+    image: 'https://eurocook.com.vn/Data/upload/images/tu%CC%89%20la%CC%A3nh/tu-lanh-aqua.jpg',
   },
   {
     name: 'Thời trang nam',
-    image: 'https://lzd-img-global.slatic.net/g/p/80d757f1dbb812674afddaef89ec9220.jpg_webp_960x960q80.jpg_.webp',
+    image: 'https://eurocook.com.vn/Data/upload/images/tu%CC%89%20la%CC%A3nh/tu-lanh-aqua.jpg',
   },
   {
     name: 'Thời trang nam',
-    image: 'https://lzd-img-global.slatic.net/g/p/80d757f1dbb812674afddaef89ec9220.jpg_webp_960x960q80.jpg_.webp',
+    image: 'https://eurocook.com.vn/Data/upload/images/tu%CC%89%20la%CC%A3nh/tu-lanh-aqua.jpg',
   },
   {
     name: 'Thời trang nam',
-    image: 'https://lzd-img-global.slatic.net/g/p/80d757f1dbb812674afddaef89ec9220.jpg_webp_960x960q80.jpg_.webp',
+    image: 'https://eurocook.com.vn/Data/upload/images/tu%CC%89%20la%CC%A3nh/tu-lanh-aqua.jpg',
   },
   {
     name: 'Thời trang nam',
-    image: 'https://lzd-img-global.slatic.net/g/p/80d757f1dbb812674afddaef89ec9220.jpg_webp_960x960q80.jpg_.webp',
+    image: 'https://eurocook.com.vn/Data/upload/images/tu%CC%89%20la%CC%A3nh/tu-lanh-aqua.jpg',
   },
   {
     name: 'Thời trang nam',
-    image: 'https://lzd-img-global.slatic.net/g/p/80d757f1dbb812674afddaef89ec9220.jpg_webp_960x960q80.jpg_.webp',
+    image: 'https://eurocook.com.vn/Data/upload/images/tu%CC%89%20la%CC%A3nh/tu-lanh-aqua.jpg',
   },
   {
     name: 'Thời trang nam',
-    image: 'https://lzd-img-global.slatic.net/g/p/80d757f1dbb812674afddaef89ec9220.jpg_webp_960x960q80.jpg_.webp',
+    image: 'https://eurocook.com.vn/Data/upload/images/tu%CC%89%20la%CC%A3nh/tu-lanh-aqua.jpg',
   },
   {
     name: 'Thời trang nam',
-    image: 'https://lzd-img-global.slatic.net/g/p/80d757f1dbb812674afddaef89ec9220.jpg_webp_960x960q80.jpg_.webp',
+    image: 'https://eurocook.com.vn/Data/upload/images/tu%CC%89%20la%CC%A3nh/tu-lanh-aqua.jpg',
   },
   {
     name: 'Thời trang nam',
-    image: 'https://lzd-img-global.slatic.net/g/p/80d757f1dbb812674afddaef89ec9220.jpg_webp_960x960q80.jpg_.webp',
+    image: 'https://eurocook.com.vn/Data/upload/images/tu%CC%89%20la%CC%A3nh/tu-lanh-aqua.jpg',
   },
   {
     name: 'Thời trang nam',
-    image: 'https://lzd-img-global.slatic.net/g/p/80d757f1dbb812674afddaef89ec9220.jpg_webp_960x960q80.jpg_.webp',
+    image: 'https://eurocook.com.vn/Data/upload/images/tu%CC%89%20la%CC%A3nh/tu-lanh-aqua.jpg',
   },
   {
     name: 'Thời trang nam',
-    image: 'https://lzd-img-global.slatic.net/g/p/80d757f1dbb812674afddaef89ec9220.jpg_webp_960x960q80.jpg_.webp',
+    image: 'https://eurocook.com.vn/Data/upload/images/tu%CC%89%20la%CC%A3nh/tu-lanh-aqua.jpg',
   },
   {
     name: 'Thời trang nam',
-    image: 'https://lzd-img-global.slatic.net/g/p/80d757f1dbb812674afddaef89ec9220.jpg_webp_960x960q80.jpg_.webp',
+    image: 'https://eurocook.com.vn/Data/upload/images/tu%CC%89%20la%CC%A3nh/tu-lanh-aqua.jpg',
   },
   {
     name: 'Thời trang nam',
-    image: 'https://lzd-img-global.slatic.net/g/p/80d757f1dbb812674afddaef89ec9220.jpg_webp_960x960q80.jpg_.webp',
+    image: 'https://eurocook.com.vn/Data/upload/images/tu%CC%89%20la%CC%A3nh/tu-lanh-aqua.jpg',
   },
   {
     name: 'Thời trang nam',
-    image: 'https://lzd-img-global.slatic.net/g/p/80d757f1dbb812674afddaef89ec9220.jpg_webp_960x960q80.jpg_.webp',
+    image: 'https://eurocook.com.vn/Data/upload/images/tu%CC%89%20la%CC%A3nh/tu-lanh-aqua.jpg',
   },
   {
     name: 'Thời trang nam',
-    image: 'https://lzd-img-global.slatic.net/g/p/80d757f1dbb812674afddaef89ec9220.jpg_webp_960x960q80.jpg_.webp',
+    image: 'https://eurocook.com.vn/Data/upload/images/tu%CC%89%20la%CC%A3nh/tu-lanh-aqua.jpg',
   },
   {
     name: 'Thời trang nam',
-    image: 'https://lzd-img-global.slatic.net/g/p/80d757f1dbb812674afddaef89ec9220.jpg_webp_960x960q80.jpg_.webp',
+    image: 'https://eurocook.com.vn/Data/upload/images/tu%CC%89%20la%CC%A3nh/tu-lanh-aqua.jpg',
   },
 ];
 
@@ -189,7 +189,7 @@ function Home() {
           <div className={cx('suggestion')}>
             <img
               className={cx('new')}
-              src="https://c.wallhere.com/photos/c3/54/Komi_san_wa_Comyushou_desu_anime_girls_anime_boys_long_hair_short_hair_black_hair_small_boobs_closed_eyes-1857779.jpg!d"
+              src="https://maylanhgiasi.net/data/upload/may-lanh-panasonic-n-kh-8.jpg"
               alt="Nổi bật"
             />
             <div className={cx('suggestion-nav')}>
@@ -214,7 +214,7 @@ function Home() {
       <div className={cx('section')}>
         <h2 className={cx('label')}>Gợi ý cho bạn</h2>
         <div className={cx('grid')}>
-          <div className={cx('row')}>
+          <div className={cx('section-row', 'row', 'sm-gutter')}>
             {PRODUCT.map((product, index) => {
               return <ProductCard key={index} data={product} />;
             })}
