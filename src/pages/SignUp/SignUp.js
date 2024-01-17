@@ -1,10 +1,59 @@
 import classNames from 'classnames/bind';
 import styles from './SignUp.module.scss';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { REACT_APP_API_KEY, REACT_APP_API_URL } from '~/private/constant';
 
 const cx = classNames.bind(styles);
 
 function SignUp() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmedPassword, setConfirmedPassword] = useState('');
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const apiUrl = REACT_APP_API_URL + 'shop/signup';
+    const apiKey = REACT_APP_API_KEY;
+    console.log(apiKey);
+
+    const requestData = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+      },
+      body: JSON.stringify({
+        email: email,
+        password: password,
+      }),
+    };
+
+    fetch(apiUrl, requestData)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('Response:', data);
+      })
+      .catch((error) => console.error(error));
+  }
+
+  function handleEmail(newEmail) {
+    setEmail(newEmail);
+  }
+
+  function handlePassword(newPassword) {
+    setPassword(newPassword);
+  }
+
+  function handleName(newName) {
+    setName(newName);
+  }
+
+  function handleConfirmedPassword(newPassword) {
+    setConfirmedPassword(newPassword);
+  }
+
   return (
     <div className={cx('login_container')}>
       <div className={cx('login_left')}></div>
@@ -26,7 +75,15 @@ function SignUp() {
             <label htmlFor="fullname" className={cx('form-label')}>
               Tên đầy đủ
             </label>
-            <input id="fullname" name="fullname" type="text" placeholder="VD: Lê Vĩ" className={cx('form-control')} />
+            <input
+              id="fullname"
+              name="fullname"
+              type="text"
+              placeholder="VD: Lê Vĩ"
+              className={cx('form-control')}
+              value={name}
+              onChange={(e) => handleName(e.target.value)}
+            />
             <span className={cx('form-message')}></span>
           </div>
 
@@ -35,6 +92,8 @@ function SignUp() {
               Email
             </label>
             <input
+              value={email}
+              onChange={(e) => handleEmail(e.target.value)}
               id="email"
               name="email"
               type="text"
@@ -49,6 +108,8 @@ function SignUp() {
               Mật khẩu
             </label>
             <input
+              value={password}
+              onChange={(e) => handlePassword(e.target.value)}
               id="password"
               name="password"
               type="password"
@@ -63,6 +124,8 @@ function SignUp() {
               Nhập lại mật khẩu
             </label>
             <input
+              value={confirmedPassword}
+              onChange={(e) => handleConfirmedPassword(e.target.value)}
               id="password_confirmation"
               name="password_confirmation"
               type="password"
@@ -72,7 +135,9 @@ function SignUp() {
             <span className={cx('form-message')}></span>
           </div>
 
-          <button className={cx('form-submit')}>Đăng ký</button>
+          <button className={cx('form-submit')} onClick={(e) => handleSubmit(e)}>
+            Đăng ký
+          </button>
 
           <div className={cx('breakline-container')}>
             <div className={cx('breakline')}></div>
